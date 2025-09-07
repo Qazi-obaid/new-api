@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Website</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      background-color: #bda974;
+    }
+
+    .home {
+      border: 3px solid red;
+      background-color: wheat;
+      height: 100px;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 50px;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .home img {
+      height: 80px;
+      width: auto;
+    }
+
+    .ul {
+      list-style: none;
+      display: flex;
+      gap: 40px;
+      margin-right: 100px;
+      padding: 0;
+    }
+
+    .ul li a {
+      text-decoration: none;
+      color: red;
+      font-weight: bold;
+      font-size: 18px;
+    }
+
+    .ul li a.active {
+      color: red;
+      padding: 8px 15px;
+      border-radius: 6px;
+    }
+
+    .section {
+      padding: 80px 100px;
+      border-bottom: 1px solid #ccc;
+    }
+
+    .section h1 {
+      color: darkred;
+      margin-bottom: 20px;
+    }
+
+    .section p {
+      font-size: 18px;
+      color: #333;
+      max-width: 800px;
+    }
+
+    .contact-form {
+      margin-top: 30px;
+      max-width: 500px;
+      background: #475d85;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    .contact-form label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: bold;
+      color: #444;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border: 2px solid #ccc;
+      border-radius: 6px;
+      font-size: 16px;
+    }
+
+    .contact-form button {
+      background: darkred;
+      color: white;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 16px;
+      font-weight: bold;
+    }
+
+    .contact-form button:hover {
+      background: red;
+    }
+
+    .footer {
+      background: wheat;
+      border-top: 3px solid red;
+      text-align: center;
+      padding: 30px 20px;
+      margin-top: 50px;
+    }
+
+    .footer p {
+      margin: 5px 0;
+      color: #444;
+      font-size: 16px;
+    }
+
+    .footer a {
+      text-decoration: none;
+      color: darkred;
+      font-weight: bold;
+    }
+
+    .footer a:hover {
+      color: red;
+    }
+    /* ✅ Responsive Design */
+
+/* For tablets and small laptops */
+@media (max-width: 992px) {
+  .home {
+    flex-direction: column;
+    height: auto;
+    padding: 10px 20px;
+  }
+
+  .ul {
+    flex-direction: row;
+    gap: 20px;
+    margin: 10px 0;
+  }
+
+  .section {
+    padding: 60px 40px;
+  }
+
+  .contact-form {
+    width: 100%;
+  }
+}
+
+@media (max-width: 600px) {
+  .home {
+    flex-direction: column;
+    text-align: center;
+    padding: 15px;
+  }
+
+  .home img {
+    height: 60px;
+  }
+
+  .ul {
+    flex-direction: column;
+    gap: 10px;
+    margin: 15px 0;
+  }
+
+  .ul li a {
+    font-size: 16px;
+  }
+
+  .section {
+    padding: 40px 20px;
+  }
+
+  .section h1 {
+    font-size: 22px;
+  }
+
+  .section p {
+    font-size: 16px;
+  }
+
+  .contact-form {
+    padding: 15px;
+    font-size: 14px;
+  }
+
+  .contact-form input,
+  .contact-form textarea {
+    font-size: 14px;
+  }
+
+  table {
+    font-size: 14px;
+  }
+
+  table th,
+  table td {
+    padding: 6px;
+  }
+}
+    
+  </style>
+</head>
+<body>
+
+  <div class="home">
+    <div>
+      <img src="hacker_hood_code_214985_225x300.jpg" alt="Logo">
+    </div>
+    <ul class="ul">
+      <li><a href="#home" class="active">HOME</a></li>
+      <li><a href="#about">ABOUT</a></li>
+      <li><a href="#contact">CONTACT</a></li>
+      <li><a href="#blogs">BLOGS</a></li>
+    </ul>
+  </div>
+
+  <div id="home" class="section">
+    <h1>Welcome to My Website</h1>
+    <p>Here you will find a simple and clean design. This website is made so you can easily navigate and get useful information. Scroll down and enjoy </p>
+  </div>
+
+  <div id="about" class="section">
+    <h1>About Us</h1>
+    <p>We are a creative team that makes web design and development easy and fun. Our goal is to mix simplicity and beauty in every project. Our mission is: <b>“Making technology accessible for everyone.”</b></p>
+  </div>
+  <div id="contact" class="section">
+    <h1>Contact Us</h1>
+    <p>If you have any questions or want to discuss your project, feel free to contact us:</p>
+    <p><b>Email:</b>  qqaziobaid9@gmail.com<br>
+       <b>Phone:</b> +92 314 2629232</p>
+    <div class="contact-form">
+      <form action="#" method="post">
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" placeholder="Enter your name" required>
+        <label for="Roll number">Roll number </label>
+        <input type="number" id="Roll number" name="Roll number" placeholder="Enter your Roll number" required>
+        <label for="father name">Father Name</label>
+        <input type="text" id="name" name="father name" placeholder="Enter your father name" required>
+        <label for="phone">Contact Number</label>
+        <input type="tel" id="phone" name="phone" placeholder="Enter your number" required>
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="5" placeholder="Write your message" required></textarea>
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+  </div>
+  <div id="blogs" class="section">
+    <h1>Our Blogs</h1>
+    <p>Here you will find the latest articles, tips, and tricks about web design and development. Every blog is written in simple and easy language so both beginners and experts can benefit. New blogs are coming soon </p>
+  </div>
+  <div class="footer">
+    <p>&copy; 2025 My Website | All Rights Reserved</p>
+    <p>
+      Follow us:
+      <a href="#">Facebook</a> |
+      <a href="#">Twitter</a> |
+      <a href="#">Instagram</a>
+    </p>
+    <p>Designed by Qazi Obaid Ur Rehamn</p>
+  </div>
+ <script src="App.js"></script>
+</body>
+</html>
